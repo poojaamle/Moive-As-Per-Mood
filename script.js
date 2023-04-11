@@ -187,9 +187,7 @@ function setGenre() {
           selGenre.push(genre.id);
         }
       }
-      //
-      
-      .log(selGenre);
+      // .log(selGenre);
       getMovies(API_URL + "&with_genres=" + encodeURI(selGenre.join(",")));
       highlightGenre();
     });
