@@ -100,7 +100,7 @@ function getMovies(url) {
     .then((res) => res.json())
 
     .then((data) => {
-      //console.log(data);
+    console.log(data);
       showMovies(data.results);
       result = data.results;
     });
@@ -187,7 +187,9 @@ function setGenre() {
           selGenre.push(genre.id);
         }
       }
-      //console.log(selGenre);
+      //
+      
+      .log(selGenre);
       getMovies(API_URL + "&with_genres=" + encodeURI(selGenre.join(",")));
       highlightGenre();
     });
